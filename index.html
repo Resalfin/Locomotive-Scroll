@@ -6,7 +6,7 @@
     <title>Real | Web Designer</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body data-scroll-container>
     <section class="navbar">
       <ul class="navbar-link-list">
         <li class="navbar-list-item">
@@ -21,23 +21,39 @@
       </ul>
     </section>
 
-    <section class="hero">
-      <div class="container-left">
-        <h1 class="hero-teks">HI, I'AM RESAL</h1>
+    <section class="hero" >
+      <div class="container-left" >
+        <h1 class="hero-teks" data-scroll data-scroll-speed="0.1">
+          HI, I'AM RESAL
+        </h1>
       </div>
-      <div class="container-right">
-        <div class="hero-image">
+      <div class="container-right" data-scroll-container>
+        <div class="hero-image" data-scroll-container>
           <img
             class="gambar-paus"
-            src="./img/hero-image.jpg"
+            src="./img/8ff074167b14a28e0ba44603255bc1e5.jpg"
             alt="gambar-apa-hayo"
+            data-scroll
+            data-scroll-speed="10"
           />
         </div>
       </div>
     </section>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"></script>
+    <link
+      src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+      rel="stylesheet"
+    ></link>
+    <script>
+      // (function () {
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+        });
+      // });
+    </script>
   </body>
 </html>
