@@ -11,8 +11,66 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Plus Jakarta Sans", Sans-serif;
+  color: var(--main-white);
 }
 
-p {
-  color: var(--main-accent);
+/* Body */
+body {
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
 }
+
+/* Navbar */
+.navbar {
+  width: 100%;
+}
+
+.navbar .navbar-link-list {
+  display: flex;
+  column-gap: 120px;
+  list-style-type: none;
+  /* horizontal center */
+  justify-content: center;
+  /* vertikal center */
+  align-items: center;
+  /* vertikal, horizontal */
+  padding: 32px 40px;
+}
+
+/* hero */
+
+.hero{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:100%;
+    padding: 0px 120px;
+}
+
+.container-left{
+    display:flex;
+    align-items: end;
+}
+
+
+
+.hero-teks{
+    font-size:140px;
+    width:554px;
+    line-height:102%;
+    letter-spacing: -1%;
+}
+
+.hero-image{
+    display:flex;
+    width: 488px;
+    height: 561px;
+    overflow:hidden;
+}
+.gambar-paus{
+    width: 100%;
+    height: 100%
+    object-fit:cover;
+}
+
