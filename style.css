@@ -49,12 +49,10 @@ body {
     padding: 0px 120px;
 }
 
-.container-left{
+.hero-content-left{
     display:flex;
     align-items: end;
 }
-
-
 
 .hero-teks{
     font-size:140px;
@@ -70,10 +68,95 @@ body {
     height: 561px;
     overflow:hidden;
     padding: 10px;
+    
 }
 .gambar-paus{
     width: 100%;
-    height: 100%
+    height: 100%;
+    border-radius: 9px;
     object-fit:cover;
 }
+
+/* About */
+
+.about{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  padding: 90px 120px;
+}
+
+.about-content{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  width: 800px;
+  height: 500px;
+}
+
+.about-title{
+  display:flex;
+  justify-content:center;
+  font-size: 50px;
+  font-weight:bold;
+  padding-bottom: 40px;
+  
+}
+.about-teks{
+  font-size: 25px;
+
+}
+/* .about-image{
+  display:flex;
+    width: 400px;
+    height: 561px;
+    overflow:hidden;
+    padding: 10px;
+}
+
+.gambar-minion{
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  object-fit:cover;
+} */
+
+/* experience */
+
+.experience{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:100%;
+  padding: 60px 120px;
+
+}
+
+.experience-title{
+  font-size: 40px;
+  font-weight:bold;
+  padding-bottom: 50px;
+}
+
+.experience-content{
+  display: flex;
+  gap : 90px;
+}
+
+.experience-items{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-radius : 9px;
+  border : 2px solid white;
+  padding : 10px;
+}
+.experience-title-item{
+  padding-bottom: 9px;
+}
+
+
+
+
 
