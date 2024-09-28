@@ -7,6 +7,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 * {
@@ -54,11 +55,16 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 0px 120px;
+  position: relative;
+  /* background-color:red; */
 }
 
 .hero-content-left {
   display: flex;
   align-items: end;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
 }
 
 .hero-teks {
@@ -67,6 +73,7 @@ body {
   width: 554px;
   line-height: 102%;
   letter-spacing: -1%;
+  display: inline-block;
 }
 
 .hero-image {
@@ -88,17 +95,21 @@ body {
 .about {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
-  padding: 90px 120px;
+  padding: 30px 120px;
+  position: relative;
+  /* background-color:yellow; */
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 800px;
   height: 500px;
+  /* background-color:red; */
 }
 
 .about-title {
@@ -106,7 +117,7 @@ body {
   justify-content: center;
   font-size: 70px;
   font-weight: bold;
-  padding-bottom: 40px;
+  padding-bottom: 1px;
 }
 .about-teks {
   text-align: justify;
@@ -132,9 +143,12 @@ body {
 .experience {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 60px 120px;
+  position: relative;
+  /* background-color:blue; */
 }
 
 .experience-title {
@@ -145,7 +159,9 @@ body {
 
 .experience-content {
   display: flex;
+  padding: 20px;
   gap: 90px;
+  /* background-color:blue; */
 }
 
 .experience-items {
@@ -156,9 +172,48 @@ body {
   border: 2px solid white;
   padding: 10px;
   background-color: var(--main-white);
-  box-shadow: 3px 3px 9px #00ffff;
+  box-shadow: 3px 3px 9px rgba(0, 255, 255, 0.9);
 }
 .experience-title-item {
   color: var(--main-bg);
   padding-bottom: 9px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .navbar .navbar-link-list {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+  }
+
+  .hero-teks {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .about {
+    padding: 40px 40px;
+  }
+
+  .experience-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .experience-items {
+    width: 100%;
+  }
 }
