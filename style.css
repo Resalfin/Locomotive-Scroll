@@ -5,6 +5,9 @@
   --main-white: #ffffff;
   --main-accent: #ff4d00;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   padding: 0;
@@ -38,74 +41,76 @@ body {
   /* vertikal, horizontal */
   padding: 32px 40px;
 }
+.navbar-list-item a {
+  text-decoration: none;
+  font-size: 15px;
+}
 
 /* hero */
 
-.hero{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    width:100%;
-    padding: 0px 120px;
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 120px;
 }
 
-.hero-content-left{
-    display:flex;
-    align-items: end;
+.hero-content-left {
+  display: flex;
+  align-items: end;
 }
 
-.hero-teks{
-    font-size:140px;
-    font-weight:bold;
-    width:554px;
-    line-height:102%;
-    letter-spacing: -1%;
+.hero-teks {
+  font-size: 140px;
+  font-weight: bold;
+  width: 554px;
+  line-height: 102%;
+  letter-spacing: -1%;
 }
 
-.hero-image{
-    display:flex;
-    width: 400px;
-    height: 561px;
-    overflow:hidden;
-    padding: 10px;
-    
+.hero-image {
+  display: flex;
+  width: 400px;
+  height: 561px;
+  overflow: hidden;
+  padding: 10px;
 }
-.gambar-paus{
-    width: 100%;
-    height: 100%;
-    border-radius: 9px;
-    object-fit:cover;
+.gambar-paus {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  object-fit: cover;
 }
 
 /* About */
 
-.about{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   padding: 90px 120px;
 }
 
-.about-content{
+.about-content {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   width: 800px;
   height: 500px;
 }
 
-.about-title{
-  display:flex;
-  justify-content:center;
-  font-size: 50px;
-  font-weight:bold;
+.about-title {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: bold;
   padding-bottom: 40px;
-  
 }
-.about-teks{
-  font-size: 25px;
-
+.about-teks {
+  text-align: justify;
+  font-size: 35px;
 }
 /* .about-image{
   display:flex;
@@ -124,39 +129,36 @@ body {
 
 /* experience */
 
-.experience{
-  display:flex;
+.experience {
+  display: flex;
   flex-direction: column;
-  align-items:center;
-  width:100%;
+  align-items: center;
+  width: 100%;
   padding: 60px 120px;
-
 }
 
-.experience-title{
-  font-size: 40px;
-  font-weight:bold;
+.experience-title {
+  font-size: 70px;
+  font-weight: bold;
   padding-bottom: 50px;
 }
 
-.experience-content{
+.experience-content {
   display: flex;
-  gap : 90px;
+  gap: 90px;
 }
 
-.experience-items{
+.experience-items {
   display: flex;
   flex-direction: column;
   width: 300px;
-  border-radius : 9px;
-  border : 2px solid white;
-  padding : 10px;
+  border-radius: 3px;
+  border: 2px solid white;
+  padding: 10px;
+  background-color: var(--main-white);
+  box-shadow: 3px 3px 9px #00ffff;
 }
-.experience-title-item{
+.experience-title-item {
+  color: var(--main-bg);
   padding-bottom: 9px;
 }
-
-
-
-
-
