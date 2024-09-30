@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+    rel="stylesheet"
+  ></link>
   </head>
   <body data-scroll-container>
     <section id="home"  class="navbar">
@@ -43,7 +47,7 @@
     <section id="about" class="about" data-scroll-container>
       <div class="about-content" data-scroll-container>
         <h1 class="about-title" data-scroll  data-scroll-speed="3" >About</h1>
-        <p class="about-teks" data-scroll data-scroll-speed="1.5"  >
+        <p class="about-teks" data-scroll data-scroll-speed="1.5" >
         Hai saya Resal Finanda mahasiswa jurusan Teknik Informatika Fakultas Teknik, Universitas Hasanuddin, 
         merupakan seorang yang bercita cita hidup damai dan bahagia.
         </p>
@@ -74,12 +78,13 @@
     </section>
 
 
+    <section class="bio" data-scroll-container>
+      <h2 class="bio-teks"><span>RAMTECH</span></h2>
+    </section>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <link
-      src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
-      rel="stylesheet"
-    ></link>
     <script>
       // (function () {
         // const scroll = new LocomotiveScroll({
@@ -92,7 +97,15 @@
          el: $("[data-scroll-container]")[0],
          smooth: true
          });
-      });
+
+         const text = $('.bio-teks').text();
+         const chars = text.split('');
+         const spanTeks = chars.map((letterTersplit,index) => {
+            return `<span data-scroll data-scroll-speed="2" data-scroll-delay="${index * 0.09}">${letterTersplit}</span>`
+         }).join('');
+         $('.bio-teks').html(spanTeks);
+         scroll.update();
+        });
     </script>
   </body>
 </html>
