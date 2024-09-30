@@ -82,11 +82,17 @@
     ></link>
     <script>
       // (function () {
-        const scroll = new LocomotiveScroll({
-          el: document.querySelector("[data-scroll-container]"),
-          smooth: true,
-        });
+        // const scroll = new LocomotiveScroll({
+        //   el: document.querySelector("[data-scroll-container]"),
+        //   smooth: true,
+        // });
       // });
+      $(document).ready(function() {
+         const scroll = new LocomotiveScroll({
+         el: $("[data-scroll-container]")[0],
+         smooth: true
+         });
+      });
     </script>
   </body>
 </html>
