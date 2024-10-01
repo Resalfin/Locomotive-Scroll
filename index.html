@@ -6,28 +6,40 @@
     <title>Real | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
     <link
-    href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
-    rel="stylesheet"
-  ></link>
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+      rel="stylesheet"
+    />
   </head>
+  <!-- Navbar -->
   <body data-scroll-container>
-    <section id="home"  class="navbar">
+    <section id="home" class="navbar">
       <ul class="navbar-link-list">
         <li class="navbar-list-item">
-          <a href="#home"><p class="navbar-item">HOME</p></a>
+          <a href="#home">
+            <p class="navbar-item">HOME</p>
+          </a>
         </li>
         <li class="navbar-list-item">
-          <a href="#about"><p class="navbar-item">ABOUT</p></a>
+          <a href="#about">
+            <p class="navbar-item">ABOUT</p>
+          </a>
         </li>
         <li class="navbar-list-item">
-          <a href="#experience"><p class="navbar-item">EXPERIENCE</p></a>
+          <a href="#experience">
+            <p class="navbar-item">EXPERIENCE</p>
+          </a>
         </li>
       </ul>
     </section>
-
+    <!-- Hero Section -->
     <section class="hero" data-scroll-container>
-      <div class="hero-content-left" data-scroll-container >
-        <h1 class="hero-teks" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1.5">
+      <div class="hero-content-left" data-scroll-container>
+        <h1
+          class="hero-teks"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="1.5"
+        >
           HI, I'AM RESAL
         </h1>
       </div>
@@ -42,21 +54,22 @@
           />
         </div>
       </div>
-    </section >
-
+    </section>
+    <!-- About -->
     <section id="about" class="about" data-scroll-container>
       <div class="about-content" data-scroll-container>
-        <h1 class="about-title" data-scroll  data-scroll-speed="3" >About</h1>
-        <p class="about-teks" data-scroll data-scroll-speed="1.5" >
-        Hai saya Resal Finanda mahasiswa jurusan Teknik Informatika Fakultas Teknik, Universitas Hasanuddin, 
-        merupakan seorang yang bercita cita hidup damai dan bahagia.
+        <h1 class="about-title" data-scroll data-scroll-speed="3">About</h1>
+        <p class="about-teks" data-scroll data-scroll-speed="1.5">
+          Hai saya Resal Finanda mahasiswa jurusan Teknik Informatika Fakultas
+          Teknik, Universitas Hasanuddin, merupakan seorang yang bercita cita
+          hidup damai dan bahagia.
         </p>
       </div>
       <!-- <div class="about-image" data-scroll-container>
         <img class="gambar-minion" src="./img/77b499b22f672325bd520dd104c76093.jpg" alt="foto diri" data-scroll data-scroll-speed="3" >
       </div> -->
     </section>
-
+    <!-- Experience -->
     <section id="experience" class="experience" data-scroll-container>
       <div class="experience-title" data-scroll data-scroll-speed="1">
         Experience
@@ -64,51 +77,53 @@
       <div class="experience-content" data-scroll-container>
         <div class="experience-items" data-scroll data-scroll-speed="1">
           <h1 class="experience-title-item">Experience 1</h1>
-          <img src="./img/hero-image.jpg" alt="exp-1">
+          <img src="./img/hero-image.jpg" alt="exp-1" />
         </div>
         <div class="experience-items" data-scroll data-scroll-speed="2">
           <h1 class="experience-title-item">Experience 2</h1>
-          <img src="./img/hero-image.jpg" alt="exp-1">
+          <img src="./img/hero-image.jpg" alt="exp-1" />
         </div>
         <div class="experience-items" data-scroll data-scroll-speed="3">
           <h1 class="experience-title-item">Experience 3</h1>
-          <img src="./img/hero-image.jpg" alt="exp-1">
+          <img src="./img/hero-image.jpg" alt="exp-1" />
         </div>
       </div>
     </section>
-
-
+    <!-- Info info -->
     <section class="bio" data-scroll-container>
       <h2 class="bio-teks"><span>RAMTECH</span></h2>
     </section>
-
-
+    <!-- Source link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script>
       // (function () {
-        // const scroll = new LocomotiveScroll({
-        //   el: document.querySelector("[data-scroll-container]"),
-        //   smooth: true,
-        // });
+      // const scroll = new LocomotiveScroll({
+      //   el: document.querySelector("[data-scroll-container]"),
+      //   smooth: true,
       // });
-      $(document).ready(function() {
-         const scroll = new LocomotiveScroll({
-         el: $("[data-scroll-container]")[0],
-         smooth: true,
-         lerp: 0.05,
-         getDirection: true,
-         reloadOnContextChange: true,
-         });
-
-         const text = $('.bio-teks').text();
-         const chars = text.split('');
-         const spanTeks = chars.map((letterTersplit,index) => {
-            return `<span data-scroll data-scroll-speed="2" data-scroll-delay="${index * 0.09}">${letterTersplit}</span>`
-         }).join('');
-         $('.bio-teks').html(spanTeks);
-         scroll.update();
+      // });
+      $(document).ready(function () {
+        const scroll = new LocomotiveScroll({
+          el: $("[data-scroll-container]")[0],
+          smooth: true,
+          lerp: 0.05,
+          getDirection: true,
+          reloadOnContextChange: true,
         });
+
+        const text = $(".bio-teks").text();
+        const chars = text.split("");
+        const spanTeks = chars
+          .map((letterTersplit, index) => {
+            return `<span data-scroll data-scroll-speed="2" data-scroll-delay="${
+              index * 0.09
+            }">${letterTersplit}</span>`;
+          })
+          .join("");
+        $(".bio-teks").html(spanTeks);
+        scroll.update();
+      });
     </script>
   </body>
 </html>
