@@ -95,7 +95,10 @@
       $(document).ready(function() {
          const scroll = new LocomotiveScroll({
          el: $("[data-scroll-container]")[0],
-         smooth: true
+         smooth: true,
+         lerp: 0.05,
+         getDirection: true,
+         reloadOnContextChange: true,
          });
 
          const text = $('.bio-teks').text();
