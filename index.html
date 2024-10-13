@@ -89,9 +89,76 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Me -->
+    <section class="contact" data-scroll="">
+      <div
+        class="contact-title"
+        data-scroll=""
+        data-scroll-direction="horizontal"
+        data-scroll-speed="-6"
+      >
+        Contact Us
+      </div>
+      <div class="contac-list">
+        <a
+          ><img
+            src="./img/instagram (1).png"
+            alt="IG-Icon"
+            href="https://instagram.com/resal_fin"
+            data-scroll=""
+            data-scroll-direction="horizontal"
+            data-scroll-delay="0.18"
+            data-scroll-speed="3"
+        /></a>
+        <a
+          ><img
+            src="./img/social (1).png"
+            alt="WA-Icon"
+            href="wa.me/+6285656333050"
+            data-scroll=""
+            data-scroll-direction="horizontal"
+            data-scroll-delay="0.12"
+            data-scroll-speed="3"
+        /></a>
+        <a
+          ><img
+            src="./img/facebook (1).png"
+            alt="FB-Icon"
+            href="https://facebook.com/resalfinanda.resalfinanda"
+            data-scroll=""
+            data-scroll-direction="horizontal"
+            data-scroll-delay="0.08"
+            data-scroll-speed="3"
+        /></a>
+      </div>
+    </section>
+
     <!-- Info info -->
-    <section class="bio" data-scroll-container>
-      <h2 class="bio-teks"><span>RAMTECH</span></h2>
+    <section class="end" data-scroll-container>
+      <span class="end-teks" data-scroll="">
+        <span data-scroll="" data-scroll-delay="0.22" data-scroll-speed="9"
+          >S</span
+        >
+        <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="9"
+          >E</span
+        >
+        <span data-scroll="" data-scroll-delay="0.14" data-scroll-speed="9"
+          >L</span
+        >
+        <span data-scroll="" data-scroll-delay="0.12" data-scroll-speed="9"
+          >E</span
+        >
+        <span data-scroll="" data-scroll-delay="0.1" data-scroll-speed="9"
+          >S</span
+        >
+        <span data-scroll="" data-scroll-delay="0.08" data-scroll-speed="9"
+          >A</span
+        >
+        <span data-scroll="" data-scroll-delay="0.06" data-scroll-speed="9"
+          >I</span
+        >
+      </span>
     </section>
     <!-- Source link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -112,17 +179,17 @@
           reloadOnContextChange: true,
         });
 
-        const text = $(".bio-teks").text();
-        const chars = text.split("");
-        const spanTeks = chars
-          .map((letterTersplit, index) => {
-            return `<span data-scroll data-scroll-speed="2" data-scroll-delay="${
-              index * 0.09
-            }">${letterTersplit}</span>`;
-          })
-          .join("");
-        $(".bio-teks").html(spanTeks);
-        scroll.update();
+        // const text = $(".bio-teks").text();
+        // const chars = text.split("");
+        // const spanTeks = chars
+        //   .map((letterTersplit, index) => {
+        //     return `<span data-scroll data-scroll-speed="2" data-scroll-delay="${
+        //       index * 0.09
+        //     }">${letterTersplit}</span>`;
+        //   })
+        //   .join("");
+        // $(".bio-teks").html(spanTeks);
+        // scroll.update();
       });
     </script>
   </body>
