@@ -148,8 +148,11 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 30%;
-  padding: 60px 120px;
+  /* height: 30%; */
+  /* padding: 60px 120px; */
+  padding-top: 60px;
+  padding-bottom: 0px;
+  padding-horizontal: 120px;
   position: relative;
 }
 
@@ -253,7 +256,7 @@ body {
   align-items: center;
   font-weight: bold;
   font-size: 70px;
-  background: linear-gradient( #00faf6, #fa00a2);
+  background: linear-gradient(#00faf6, #fa00a2);
   -webkit-background-clip: text;
   color: transparent;
 }
