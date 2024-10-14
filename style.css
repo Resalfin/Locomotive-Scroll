@@ -253,5 +253,7 @@ body {
   align-items: center;
   font-weight: bold;
   font-size: 70px;
-  color: var(--main-white);
+  background: linear-gradient( #00faf6, #fa00a2);
+  -webkit-background-clip: text;
+  color: transparent;
 }
